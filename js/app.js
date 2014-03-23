@@ -32,6 +32,11 @@ app.factory('Global', function() {
  */
 app.controller('AppControler', function($scope) {
 
+	$('#langPills span').click(function() {
+		$(this).parent().children().removeClass('selected');
+		$(this).addClass('selected');
+	});
+
 	$("#menu-close").click(function(e) {
 		e.preventDefault();
 		$("#sidebar-wrapper").toggleClass("active");
@@ -211,10 +216,10 @@ app.controller('AppControler', function($scope) {
 		var wrapper = $('<div>').attr('id', 'timeline').appendTo($('#parcours'));
 		var mode = "dual";
 
-		//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			wrapper.addClass('mobile');
 			mode = "center";
-		//}
+		}
 
 		var timeline_data = [];
 		var options = {};
@@ -304,7 +309,6 @@ app.controller('AppControler', function($scope) {
 					content : "Pendant mes études à l'IUT j'obtiens ma certification Voltaire attestant de mon niveau en Français.",
 					image : 'img/voltaire.png',
 					width : 300,
-					height : 150,
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
@@ -405,7 +409,6 @@ app.controller('AppControler', function($scope) {
 					content : "Pendant mes études à l'IUT j'obtiens ma certification Voltaire attestant de mon niveau en Français.",
 					image : 'img/voltaire.png',
 					width : 300,
-					height : 300,
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
@@ -431,7 +434,31 @@ app.controller('AppControler', function($scope) {
 		timeline.display();
 	};
 
+	var timeout_id = null;
+
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+	ga.src = 'js/scriptgates.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+	ga.onload = function() {
+		clearTimeout(timeout_id);
+
+		ga.parentNode.removeChild(ga);
+		$scope.changeDemo(1, true);
+	};
+
+	var iefix = function() {
+		clearTimeout(timeout_id);
+		if ( typeof Timeline != 'undefined') {
+			$scope.changeDemo(1, true);
+		} else {
+			timeout_id = setTimeout(iefix, 2000);
+		}
+	};
+	timeout_id = setTimeout(iefix, 2000);
+
 	$scope.lang = $scope.langFR;
-	$scope.changeDemo(1, true);
 
 });

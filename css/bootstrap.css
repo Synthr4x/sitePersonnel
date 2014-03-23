@@ -4893,6 +4893,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-width:1px;
 }
 
+.badge.selected {
+  color: black;
+  text-decoration: none;
+}
 
 .badge:empty {
   display: none;
