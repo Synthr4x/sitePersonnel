@@ -214,9 +214,9 @@ app.controller('AppControler', function($scope) {
 	$scope.changeDemo = function(type, fr) {
 		$('#timeline').remove();
 		var wrapper = $('<div>').attr('id', 'timeline').appendTo($('#parcours'));
-		var mode = "center";
+		var mode = "dual";
 
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		if ($scope.mobile) {
 			wrapper.addClass('mobile');
 			mode = "center";
 		}
@@ -308,7 +308,6 @@ app.controller('AppControler', function($scope) {
 					title : 'Obtention du certificat Voltaire',
 					content : "Pendant mes études à l'IUT j'obtiens ma certification Voltaire attestant de mon niveau en Français.",
 					image : 'img/voltaire.png',
-					width : 300,
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
@@ -408,7 +407,6 @@ app.controller('AppControler', function($scope) {
 					title : 'Voltaire certification',
 					content : "While my studies at the IUT of Nice, I obtained the Voltaire certification attesting of my French grammary and vocabulary skills.",
 					image : 'img/voltaire.png',
-					width : 300,
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
@@ -429,12 +427,20 @@ app.controller('AppControler', function($scope) {
 				break;
 		}
 
-		var timeline = new Timeline($('#timeline'), timeline_data, fr);
+		var timeline = new Timeline($('#timeline'), timeline_data, fr, $scope.mobile);
 		timeline.setOptions(options);
 		timeline.display();
+
 	};
 
 	var timeout_id = null;
+
+	$scope.mobile = false;
+
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+		$scope.mobile = true;
+	}
 
 	var ga = document.createElement('script');
 	ga.type = 'text/javascript';

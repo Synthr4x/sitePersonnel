@@ -8,7 +8,7 @@
  | @free for you by scriptgates.com         |
  |------------------------------------------|
  */
-function Timeline(j, l, fr) {
+function Timeline(j, l, fr, mobile) {
 	var a = this, m = $(document.body);
 	this._lightbox = this._overlay = this._column_center = this._column_right = this._column_left = this._spine = this._container = null;
 	this._data = l;
@@ -25,6 +25,11 @@ function Timeline(j, l, fr) {
 		this._readmore_text = "Read More...";
 	else
 		this._readmore_text = "Plus d'informations...";
+		
+	var width = 400;
+	if(mobile){
+		width = "95%";
+	}
 
 	this._max_element_width = 0;
 	this._spint_margin = 100;
@@ -44,7 +49,7 @@ function Timeline(j, l, fr) {
 	this._default_element_data = {
 		type : "blog_post",
 		date : "2000-01-01",
-		width : 400,
+		width : width,
 		title : null,
 		content : null,
 		image : null,
