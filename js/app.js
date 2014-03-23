@@ -331,90 +331,90 @@ app.controller('AppControler', function($scope) {
 				timeline_data = [{
 					type : 'blog_post',
 					date : '1991-04-03',
-					title : 'Naissance',
+					title : 'Birth',
 					image : "img/akron.jpg",
-					content : 'Né à Akron Ohio aux Etats-Unis'
+					content : 'Born in Akron Ohio in the USA'
 				}, {
 					type : 'blog_post',
 					date : '1995-09-01',
-					title : 'Entrée à l\'école catholique St Sebastian',
-					content : 'C\'est en entrant dans une école catholique que je comprends que ma passion, c\'est les sciences !',
+					title : 'St Sebastian Catholic school',
+					content : 'By entering a catholic school I rapidly understand that my passion is science.',
 					image : 'img/stSebastian.jpg'
 				}, {
 					type : 'blog_post',
 					date : '1995-09-01',
 					image : 'img/piano.jpg',
-					title : 'Premières leçons de piano',
-					content : 'C\'est à cette époque que je commence mes premières leçons de piano.',
+					title : 'First piano lessons',
+					content : 'It\'s around this time that I start taking my first piano lessons',
 				}, {
 					type : 'blog_post',
 					date : '2000-12-01',
-					title : 'Déménagement à Nice',
-					content : 'Suite au divorce de mes parents en 1999 je déménage à Nice avec ma mère.',
+					title : 'Moving to Nice',
+					content : 'After the Divorce of my parents in 1999, I moved to Nice with my mother.',
 					image : 'img/baieDesAnges.jpg'
 				}, {
 					type : 'blog_post',
 					date : '2004-09-01',
-					title : 'Entrée au collège Roland Garros',
-					content : 'J\'ai la chance d\'intégrer le programme d\'horaires aménagées du collège Roland Garros avec le concervatoire de Nice.',
+					title : 'Roland Garros middle school',
+					content : 'I have the oportunity to integrate the alternated schedule program in the Roland Garros college with the concervatory of Nice.',
 					image : 'img/rolandGarros.jpg',
 				}, {
 					type : 'blog_post',
 					date : '2004-09-01',
-					title : 'Entrée au Concervatoire de Nice',
-					content : 'Grâce au programme d\'horaires aménagées j\'ai eu l\'opportunité d\'être un élève au concervatoire de Nice.',
+					title : 'Entrance in the Concervatory of Nice',
+					content : 'Thanks to the alternated schedule program, I have the opportunity to be a student in the concervatory of Nice.',
 					image : 'img/concervatoire.jpg',
 				}, {
 					type : 'blog_post',
 					date : '2007-09-01',
-					title : 'Entrée au Lycée Estienne D\'Orves',
+					title : 'Estienne D\'Orves high school',
 					image : 'img/estiennneDorves.jpg',
 				}, {
 					type : 'blog_post',
 					date : '2010-07-07',
-					title : 'Obtention du Baccalauréat',
-					content : 'Obtention en 2010 du Baccalauréat Scientifique spécialité Mathématiques avec mention assez bien.',
+					title : 'Obtention of my High school degree',
+					content : 'In 2010 I obtained my mathematics specialty scientific high school degree with a "Assez bien" mention.',
 					image : 'img/bac.jpg',
 				}, {
 					type : 'blog_post',
 					date : '2010-09-01',
-					title : 'Entrée à l\'IUT de Nice',
-					content : 'Je commence enfin mon initiation aux métiers de l\'informatique, à l\'IUT Informatique de Nice.',
+					title : 'Entrance at the IUT of Nice',
+					content : 'I finally start my initiation in computer science at the IUT of Nice in the IT department. A 2-year technical university degree.',
 					image : 'img/iut.jpg',
 					readmore : 'http://www.iut.unice.fr/formations/fiche/id/11_dut-informatique'
 				}, {
 					type : 'blog_post',
 					date : '2012-04-08',
-					title : 'Stage à SponsorBoost',
-					content : 'Dans le cadre du stage à l\'IUT, j\'ai fait le mien à SponsorBoost, une start-up de publicité en ligne en tant que développeur web avec un camarade de promotion. J\'y apporterais des améliorations au site existant ainsi que développerais une nouvelle mouture de ce dernier en utilisant des technologies web plus modernes et plus performantes.<br>Celui-ci sera développé grâce à un framework MVC en PHP développé par nos soins (mon collègue et moi), ainsi qu\'avec JQuery, Ajax et Bootstrap. Ce stage sera suivi d\'une courte embauche qui n\'a malheuresement pas pu durer suite à la reprise de mes études juste après.',
+					title : 'Internship at SponsorBoost',
+					content : 'In the context of my IUT internship, I did mine at SponsorBoost, an online advertising startup as a Web Developper with a collegue of my promotion. I would enhance the existing website, and also develop a new version of this one using more modern and performant web technologies. This project was developped using our own MVC framework that we developped (my collegue and I), and with JQuery, Ajax and Bootstrap.<br>This internship was followed by a short hiring that could not be continued due to my wish of continuing my studies.',
 					image : 'img/sponsorboost.jpg',
 					readmore : 'http://www.sponsorboost.com/'
 				}, {
 					type : 'blog_post',
 					date : '2012-09-01',
-					title : 'Entrée à Polytech\' Nice en SI3',
-					content : "Ayant été bien classé à l'IUT de Nice avec la meilleure note au Jury pour le stage, et étant 9ème au classement Informatique ainsi que 11ème au classement des matières générales. Je décide de rentrer à Polytech' Nice à Sophia Antipolis pour poursuivre mes études dans le but de devenir Ingénieur en Informatique.",
+					title : 'Entrance at Polytech\' Nice',
+					content : "Having a good rank at the obtention of my DUT with the best grade at the Internship jury, and also being ranked 9th in computer science, and 11th in general matters, I decide to pursue my studies at Polytech' Nice to become a computer engineer.",
 					image : 'img/polytech.png',
 					readmore : 'http://www.polytechnice.fr/'
 				}, {
 					type : 'iframe',
 					date : '2012-12-06',
 					title : 'Nuit de l\'informatique 2012',
-					content : "Avec des anciens de promotion de l'IUT de Nice, nous décidons de participer à la nuit de l'informatique 2012. Cet évènement consiste à rassembler une équipe de développeurs pendant une soirée et une nuit afin de remporter des défis de programmation en respectant un thème. Cette année le thème était le patrimoine français, et avec une dizaine des 30 membres de l'équipe j'ai pu diriger l'équipe de développement du défi Processing (Java).",
+					content : "With friends of my IUT days, we decide to participate in the annual event of Sophia Antipolis of computer science students, the Night of computer Science (la nuit de l'informatique). The goal of this event is to gather a team of developpers for an evening and a whole night to win programming challenges with an imposed theme. This year the theme was the French patrimony, and with a group of 10 developpers of the 30 members of our team, I had the opportunity to lead the Processing (Java) development team.",
 					url : '//www.youtube.com/embed/Jy-m6jGqYfs',
 				}, {
 					type : 'blog_post',
 					date : '2011-05-15',
-					title : 'Obtention du certificat Voltaire',
-					content : "Pendant mes études à l'IUT j'obtiens ma certification Voltaire attestant de mon niveau en Français.",
+					title : 'Voltaire certification',
+					content : "While my studies at the IUT of Nice, I obtained the Voltaire certification attesting of my French grammary and vocabulary skills.",
 					image : 'img/voltaire.png',
 					width : 300,
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
 					date : '2013-09-17',
-					title : 'Entrée à Miage en M1',
-					content : "Ayant été déçu de la formation de Polytech' Nice et de l'aperçu de ce que pouvait être le métier d'Ingénieur en Informatique, je décide de me réorienter dans la formation Miage se trouvant également à Sophia Antipolis. Cette formation correspond plus à la vision que je me fais du métier d'informaticien, plus porté sur le développement et la théorie Informatique ainsi que la gestion d'entreprise.",
+					title : 'Entrance at Miage',
+					content : "Having been disappointed with the formation of Polytech 'Nice and after catching a glimpse of what could be a career in Computer Engineering, I decided to redirect myself in the Miage formation also located in Sophia Antipolis. This formation is more of what I imagined a job in computer science would be, more focused on development, computer science theory and business management.",
 					image : 'img/miage.jpg',
 					readmore : 'http://miage.unice.fr/'
 				}];
