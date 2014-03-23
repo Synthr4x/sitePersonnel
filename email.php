@@ -13,11 +13,11 @@ if (!isset($_POST['inputname']) ||
 
 $sujet = 'Contacte de mon site perso !';
 $message = "De : " . $_POST['inputname'] . "<br>" . $_POST['inputemail'] .  "<br>message : " . $_POST['inputmessage'];
-$destinataire = 'jokho26@gmail.com';
+$destinataire = 'pal0man06gmail.com';
 
 
- $headers ='From: "Steven Siddi"<contact@steven-siddi.com>'."\n";
- $headers .='Reply-To: contact@steven-siddi.com'."\n";
+ $headers ='From: "Christian Pavinich"<contact@christianpavinich.com>'."\n";
+ $headers .='Reply-To: contact@christianpavinich.com'."\n";
  $headers .='Content-Type: text/html; charset="utf-8"'."\n";
  $headers .='Content-Transfer-Encoding: 8bit'; 
 
