@@ -155,8 +155,13 @@ function Timeline(j, l, fr) {
 	};
 	this._getDateString = function(a) {
 		a = a.split("-");
-		return a[2] + " " + " January February March April May June July August September October November December"
-		.split(" ")[parseInt(a[1], 10)] + " " + a[0]
+		if (!fr) {
+			return a[2] + " " + " January February March April May June July August September October November December"
+			.split(" ")[parseInt(a[1], 10)] + " " + a[0];
+		} else {
+			return a[2] + " " + " Janvier Février Mars Avril Mai Juin Juillet Août Septembre Octobre Novembre Décembre"
+			.split(" ")[parseInt(a[1], 10)] + " " + a[0];
+		}
 	};
 	this._setGalleryWidth = function(a) {
 		!0 !== a.data("loaded") && (a.parent().addClass("loaded"), a.data("loaded", !0).width(a.children("div.ruler").width()))

@@ -1,6 +1,6 @@
 #timeline.mobile {
 	width: 100%;
-	margin: 0px auto;
+	margin: auto;
 }
 
 @media screen and (max-width: 600px) {

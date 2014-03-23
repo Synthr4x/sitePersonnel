@@ -124,7 +124,7 @@ app.controller('AppControler', function($scope) {
 			downloadCV : "Téléchargez mon CV en anglais ou en français.",
 			englishDownloadlLabel : "Anglais",
 			frenchDownloadLabel : "Français",
-			poweredByText : "Ce site à été crée grâce à Bootstrap et utilise Angular.js, Ajax, et PHP. Si vous avez des remarques ou idées d'amélioration n'hésitez surtout pas à m'écrire un commentaire grâce au bouton ci-dessous!",
+			poweredByText : "Ce site à été crée grâce à Bootstrap et utilise Angular.js, Ajax, et PHP. Si vous avez des remarques ou idées d'amélioration n'hésitez surtout pas à m'écrire un commentaire !",
 			writeMessage : "Ecrire un commentaire "
 		},
 
@@ -214,7 +214,7 @@ app.controller('AppControler', function($scope) {
 	$scope.changeDemo = function(type, fr) {
 		$('#timeline').remove();
 		var wrapper = $('<div>').attr('id', 'timeline').appendTo($('#parcours'));
-		var mode = "dual";
+		var mode = "center";
 
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			wrapper.addClass('mobile');
