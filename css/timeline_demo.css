@@ -1,0 +1,15 @@
+#timeline.mobile {
+	width: 100%;
+	margin: 0px auto;
+}
+
+@media screen and (max-width: 600px) {
+	#timeline {
+		width: 100%;
+	}
+}
+@media screen and (orientation: portrait) {
+	#timeline {
+		width: 100%;
+	}
+}

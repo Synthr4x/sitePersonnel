@@ -226,7 +226,7 @@ div.timeline_element div.img_overlay {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background: url('../images/opacity.png') repeat;  /*Fallback for IE*/
+    background: url('../img/opacity.png') repeat;  /*Fallback for IE*/
     background: rgba(0,0,0,0.5);
     filter:alpha(opacity=0);
     opacity: 0;
@@ -251,7 +251,7 @@ div.timeline_element div.img_overlay span {
     left: 50%;
     margin: -24px 0px 0px -24px;
     cursor: pointer;
-    background-image: url('../images/search.png');
+    background-image: url('../img/search.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     filter:alpha(opacity=0);
@@ -269,7 +269,7 @@ div.timeline_element div.img_overlay.loading span {
     opacity: 1;
 }
 div.timeline_element div.img_overlay.loading span {
-    background-image: url('../images/loader.gif');
+    background-image: url('../img/loader.gif');
 }
 
 /* Slider Element */
@@ -302,11 +302,11 @@ div.timeline_element.slider div.content span.slider_next {
     cursor: pointer;
 }
 div.timeline_element.slider div.content span.slider_prev {
-    background-image: url('../images/prev.png');
+    background-image: url('../img/prev.png');
     right: 34px;
 }
 div.timeline_element.slider div.content span.slider_next {
-    background-image: url('../images/next.png');
+    background-image: url('../img/next.png');
     right: 5px;
 }
 
@@ -314,7 +314,7 @@ div.timeline_element.slider div.content span.slider_next {
 div.timeline_element.iframe div.content.loading {
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-image: url('../images/loader.gif');
+    background-image: url('../img/loader.gif');
 }
 div.timeline_element.iframe div.content iframe {
     width: 100%;
@@ -396,7 +396,7 @@ div.timeline_overlay {
     right: 0px;
     left: 0px;
     display: none;
-    background: url('../images/opacity.png') repeat;  /*Fallback for IE*/
+    background: url('../img/opacity.png') repeat;  /*Fallback for IE*/
     background-color: rgba(0, 0, 0, 0.5);
 }
 div.timeline_overlay.open {
@@ -432,7 +432,7 @@ div.timeline_overlay div.lightbox.loaded {
             box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
 div.timeline_overlay div.lightbox.updating {
-    background-image: url('../images/loader.gif');
+    background-image: url('../img/loader.gif');
     -webkit-transition: all 0.5s linear;
        -moz-transition: all 0.5s linear;
         -ms-transition: all 0.5s linear;
@@ -486,10 +486,10 @@ div.timeline_overlay div.lightbox.updating span {
     display: none;
 }
 div.timeline_overlay div.lightbox span.prev {
-    background-image: url('../images/prev.png');
+    background-image: url('../img/prev.png');
     left: 10px;
 }
 div.timeline_overlay div.lightbox span.next {
-    background-image: url('../images/next.png');
+    background-image: url('../img/next.png');
     right: 10px;
 }

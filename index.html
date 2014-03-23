@@ -7,13 +7,12 @@
 		<meta name="author" content="Christian Pavinich">
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-		<title>Portfolio - Christian Pavinich</title>
+		<title>Christian Pavinich</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 
 		<!-- Add custom CSS here -->
-		<link href="css/stylish-portfolio.css" rel="stylesheet">
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -23,6 +22,8 @@
 
 		<link rel="stylesheet" type="text/css" href="css/timeline.css" >
 		<link rel="stylesheet" type="text/css" href="css/timeline_light.css" />
+		<link href="css/stylish-portfolio.css" rel="stylesheet">
+		<link href="css/timeline_demo.css" rel="stylesheet">
 
 	</head>
 
@@ -58,8 +59,8 @@
 		<!-- /Side Menu -->
 
 		<div id="langPills">
-			<span class="badge" ng-click="lang = langFR; changeDemo(1, 10, true)">FR</span>
-			<span class="badge" ng-click="lang = langEN; changeDemo(2, 10, false)">EN</span>
+			<span class="badge" ng-click="lang = langFR; changeDemo(1, true)">FR</span>
+			<span class="badge" ng-click="lang = langEN; changeDemo(2, false)">EN</span>
 		</div>
 
 		<!-- Full Page Image Header Area -->
@@ -225,40 +226,7 @@
 		<!-- /Portfolio -->
 
 		<!-- Call to Action -->
-		<div class="call-to-action" id="complements">
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 text-center">
-					<h2 ng-bind-html="lang.complements.title"></h2>
-					<hr>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<h2 ng-bind-html="lang.complements.downloadCV"></h2>
-						<i class="fa fa-arrow-right fa-2x"></i><a href="docs/CV - Christian - Pavinich - Anglais.pdf" target="CVEN" ng-bind-html="lang.complements.englishDownloadlLabel" class="btn btn-default btn-lg"> </a>
-						<a href="docs/CV - Christian - Pavinich.pdf" target="CVFR" class="btn btn-lg btn-default" ng-bind-html="lang.complements.frenchDownloadLabel"></a><i class="fa fa-arrow-left fa-2x"></i>
-					</div>
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<h3 ng-bind-html="lang.complements.poweredByText"></h3>
-						<a href="#top" class="btn btn-lg btn-primary" ng-bind-html="lang.complements.writeMessage"></a>
-						<hr>
-						<ul class="list-inline">
-							<li><img src="img/angular.png" height="60" width="205" alt="" class="img-rounded">
-							</li>
-							<li><img src="img/php.png" alt="" height="60" width="100" class="img-rounded">
-							</li>
-							<li><img src="img/ajax.png" alt="" height="60" width="205" class="img-rounded">
-							</li>
-						</ul>
-						<hr>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!-- /Call to Action -->
 
 		<!-- Footer -->
@@ -302,6 +270,7 @@
 		<!-- /Footer -->
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		
 		<script src="js/bootstrap.js"></script>
 		<script src="js/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
@@ -309,7 +278,7 @@
 		<script src="js/scriptgates.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/script.js"></script>
-		
+
 	</body>
 
 </html>
