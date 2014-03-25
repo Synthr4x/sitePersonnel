@@ -29,6 +29,52 @@
 	</head>
 
 	<body ng-controller="AppControler">
+
+		<div class="modal fade" id="modalComment" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div id="modal" class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" ng-bind-html="lang.modal.title"></h4>
+					</div>
+					<form role="form" id="commentForm" action="email.php" method="post">
+						<div class="modal-body">
+							<div class="alert alert-warning fade in" id="alertComment">
+								<button type="button" class="close" ng-click="cacherAlerte('#alertComment', 0)" aria-hidden="true">
+									×
+								</button>
+								<p></p>
+							</div>
+							<div class="form-group">
+								<label for="emailComment" ng-bind-html="lang.modal.mail"></label>
+								<input type="email" class="form-control" id="emailComment" name="emailComment">
+							</div>
+							<div class="form-group">
+								<label for="subjectComment" ng-bind-html="lang.modal.subject"></label>
+								<input type="text" class="form-control" id="subjectComment" name="subjectComment">
+							</div>
+							<div class="form-group">
+								<label for="contentComment" ng-bind-html="lang.modal.content"></label>
+								<textarea class="form-control" id="contentComment"  name="contentComment" rows="10"></textarea>
+							</div>
+
+						</div>
+					</form>
+
+					<div class="modal-footer">
+						<button type="button" ng-click="sendComment()" class="btn btn-default">
+							<span ng-bind-html="lang.modal.send"></span>
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							<span ng-bind-html="lang.modal.cancel"></span>
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
 		<!-- Side Menu -->
 		<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
 		<div id="sidebar-wrapper">
@@ -250,7 +296,13 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h3 ng-bind-html="lang.complements.poweredByText"></h3>
-						<a href="#top" class="btn btn-lg btn-primary" ng-bind-html="lang.complements.writeMessage"></a>
+						<div class="alert alert-warning fade in" id="alertSuccess">
+							<button type="button" class="close" ng-click="cacherAlerte('#alertSuccess', 1000)" aria-hidden="true">
+								×
+							</button>
+							<p></p>
+						</div>
+						<button  class="btn btn-lg btn-primary" ng-bind-html="lang.complements.writeMessage" data-toggle="modal" data-target="#modalComment"></button>
 						<hr>
 						<ul class="list-inline">
 							<li><img src="img/angular.png" height="60" width="205" alt="" class="img-rounded">
@@ -310,12 +362,13 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 		<script src="js/bootstrap.js"></script>
+		<script src="js/script.js"></script>
+
 		<script src="js/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 		<script src="js/angular-sanitize.js"></script>
 
 		<script src="js/app.js"></script>
-		<script src="js/script.js"></script>
 
 	</body>
 

@@ -21,7 +21,9 @@ html, body {
 	font-weight: 700;
 }
 
-
+textarea {
+	resize: none;
+}
 
 /* Side Menu */
 

@@ -37,4 +37,43 @@ function stoprattle(which) {
 	which.style.top = 0
 }
 
+function checkEmail() {
+	var mail = $("#emailComment").val();
+
+	if (mail !== null && mail !== '') {
+		var atpos = mail.indexOf("@");
+		var dotpos = mail.lastIndexOf(".");
+		if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= mail.length) {
+			$("#emailComment").parent().addClass('has-warning');
+			return;
+		}
+	} else {
+
+		$("#emailComment").parent().addClass('has-warning');
+		return;
+	}
+	$("#emailComment").parent().removeClass('has-warning');
+}
+
+function checkContent() {
+	var contenu = $("#contentComment").val();
+
+	if (contenu === null || contenu === '') {
+		$("#contentComment").parent().addClass('has-warning');
+		return;
+	}
+	$("#contentComment").parent().removeClass('has-warning');
+}
+
+
+$(document).ready(function() {
+	$('#emailComment').on('change', function() {
+		checkEmail();
+	});
+
+	$('#contentComment').on('change', function() {
+		checkContent();
+	});
+
+});
 

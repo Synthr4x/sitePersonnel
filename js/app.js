@@ -133,6 +133,17 @@ app.controller('AppControler', function($scope) {
 			mailContact : "Vous pouvez me joindre par e-mail sur ",
 			socialContact : "retrouvez moi aussi sur Facebook Twitter, Google+ et LinkedIn!",
 			footer : "Site crée et maintenu par Christian Pavinich - 2014"
+		},
+		modal : {
+			title : "Envoyez un commentaire.",
+			mail : "Votre e-mail",
+			subject : "Sujet",
+			content : "Votre message",
+			send : "Envoyer",
+			cancel : "Annuler",
+			success : "Votre commentaire a été envoyé.",
+			error : "Il y a eu une erreur avec l'envoi du commentaire.",
+			missing : "Il manque des informations dans le formulaire d'envoi."
 		}
 	};
 
@@ -196,7 +207,7 @@ app.controller('AppControler', function($scope) {
 
 		complements : {
 			title : "Complements",
-			downloadCV : "Download my French or English CV.",
+			downloadCV : "Download my French or English resume.",
 			englishDownloadlLabel : "English",
 			frenchDownloadLabel : "French",
 			poweredByText : "This Website is powered by Bootstrap, Angular.js, Ajax and PHP. If you have any comments or ideas to help me make this website better, please de not hesitate to send me a message right below !",
@@ -208,6 +219,18 @@ app.controller('AppControler', function($scope) {
 			mailContact : "You can reach me on my e-mail on",
 			socialContact : "Catch me also on Facebook, Twitter, Google+ and LinkedIn !",
 			footer : "Website created and maintained by Christian Pavinich - 2014"
+		},
+
+		modal : {
+			title : "Send a comment",
+			mail : "Your e-mail",
+			subject : "Subject",
+			content : "Your message",
+			send : "Send",
+			cancel : "Cancel",
+			success : "Your comment has been sent.",
+			error : "Internal error, your comment has not be sent.",
+			missing : "There is missing information in your comment."
 		}
 	};
 
@@ -467,4 +490,70 @@ app.controller('AppControler', function($scope) {
 
 	$scope.lang = $scope.langFR;
 
+	$scope.afficherAlerte = function(id, msg, type) {
+		$(id).alert();
+
+		$(id).show();
+
+		$(id).find("p").text(msg);
+
+		$(id).removeClass("alert-danger");
+		$(id).removeClass("alert-info");
+		$(id).removeClass("alert-primary");
+		$(id).removeClass("alert-warning");
+		$(id).removeClass("alert-success");
+
+		switch (type) {
+			case "warning":
+				$(id).addClass("alert-warning");
+				break;
+			case "danger":
+				$(id).addClass("alert-danger");
+				break;
+			case "success":
+				$(id).addClass("alert-success");
+				break;
+		}
+
+	};
+
+	$scope.cacherAlerte = function(id, tps) {
+		$(id).fadeOut(tps);
+	};
+
+	$scope.cacherAlerte("#alertComment", 0);
+	$scope.cacherAlerte("#alertSuccess", 0);
+
+	$(".alert").alert();
+
+	$scope.sendComment = function() {
+		checkEmail();
+		checkContent();
+
+		// je récupère les valeurs
+		var contenu = $('#contentComment');
+		var mail = $('#emailComment');
+
+		if (contenu.parent().hasClass('has-warning') || mail.parent().hasClass('has-warning')) {
+			$scope.afficherAlerte("#alertComment", $scope.lang.modal.missing, "warning");
+			return false;
+		} else {
+			$('#modalComment').modal('hide');
+			$scope.cacherAlerte("#alertComment", 0);
+
+			$.ajax({
+				url : $('#commentForm').attr('action'), // le nom du fichier indiqué dans le formulaire
+				type : $('#commentForm').attr('method'), // la méthode indiquée dans le formulaire (get ou post)
+				data : $('#commentForm').serialize(), // je sérialise les données (voir plus loin), ici les $_POST
+				success : function(html) {// je récupère la réponse du fichier PHP
+					$scope.afficherAlerte("#alertSuccess", $scope.lang.modal.success, "success");
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					$scope.afficherAlerte("#alertSuccess", $scope.lang.modal.error, "danger");
+				}
+			});
+		}
+
+		return;
+	};
 });
