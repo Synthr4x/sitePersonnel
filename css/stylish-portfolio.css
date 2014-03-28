@@ -8,6 +8,10 @@ html, body {
 	min-width: 100%;
 }
 
+#headerBlock {
+	padding-top: 100px;
+}
+
 .vert-text {
 	display: table-cell;
 	vertical-align: middle;
@@ -21,7 +25,9 @@ html, body {
 	font-weight: 700;
 }
 
-
+textarea {
+	resize: none;
+}
 
 /* Side Menu */
 
@@ -119,7 +125,7 @@ html, body {
 
 .header {
 	display: table;
-	height: 85%;
+	height: 60%;
 	width: 100%;
 	position: relative;
 	background: url(../img/bg.jpg) no-repeat center center fixed;
@@ -133,14 +139,16 @@ html, body {
 
 .intro {
 	padding: 50px 0;
+	background: #ffffff;
+	color: #333333;
 }
 
 /* Services */
 
 .services {
-	background: #7fbbda;
+	background: #ffffff;
 	padding: 50px 0;
-	color: #ffffff;
+	color: #333333;
 }
 
 .service-item {
@@ -148,7 +156,8 @@ html, body {
 }
 
 i.service-icon {
-	border: 3px solid #ffffff;
+	border: 3px solid #0A5175;
+	color : #0A5175;
 	border-radius: 50%;
 	display: inline-block;
 	font-size: 56px;
@@ -180,6 +189,8 @@ i.service-icon:hover {
 /* Portfolio */
 
 .portfolio {
+	color: #ffffff;
+	background: #7fbbda;
 	padding: 50px 0;
 }
 
@@ -194,8 +205,8 @@ i.service-icon:hover {
 /* Call to Action */
 
 .call-to-action {
-	color: #ffffff;
-	background: #0a5175;
+	background: #0A5175;
+	color : #ffffff;
 	padding: 50px 0;
 }
 
@@ -211,4 +222,7 @@ i.service-icon:hover {
 
 footer {
 	padding: 100px 0;
+	background: #ffffff;
+	color: #333333;
 }
+

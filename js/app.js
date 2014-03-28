@@ -62,7 +62,7 @@ app.controller('AppControler', function($scope) {
 	});
 
 	$scope.langFR = {
-		title : "Bienvenue sur ma page personelle !",
+		title : "Etudiant Français/Américain en Informatique à Sophia-Antipolis en Master Miage, passioné de nouvelles technologies et du développement Informatique.",
 		menu : {
 			category : "Catégories",
 			home : "Acceuil",
@@ -77,10 +77,9 @@ app.controller('AppControler', function($scope) {
 			title : "Mon parcours personnel, professionnel, et ma formation."
 		},
 
-		calloutText : "Ce que je sais faire.",
+		calloutText : "Mes compétences",
 
 		skills : {
-			title : "Mes compétences",
 			web : {
 				title : "Développement Web",
 				text : "Expérience dans les technologies Web tels que JQuery, HTML5, JEE, PHP ou encore Ajax. Utilisation de frameworks modernes comme Symfony et Angular.js."
@@ -91,6 +90,7 @@ app.controller('AppControler', function($scope) {
 			},
 			desktopDevelopment : {
 				title : "Développement logiciel",
+				agile : "Méthodes agiles",
 				text : "Développement de nombreux projets en Java utilisant les librairies Swing et Socket, mais aussi des projets en C, C#, C++, Python, VBA/VBS, etc... Connaissance également des patrons de conception majeures comme MVC, ou les patrons du \"Gang of Four\"."
 			},
 			OS : {
@@ -110,12 +110,16 @@ app.controller('AppControler', function($scope) {
 		projects : {
 			title : "Mes projets",
 			runBelievable : {
-				title : "Application mobile sur Android et IOs",
-				text : "Développement d'une application mobile sur smartphones Android et Apple en utilisant Cordova/Phonegap à destination des sportifs pour le suivi et la planification de sessions sportives comme la course."
+				title : "RunBelievable",
+				text : "Développement d'une application mobile sur smartphones Android et Apple en utilisant Cordova/Phonegap à destination des sportifs pour le suivi et la planification de sessions sportives comme la course, le vélo...<br>Utilisation du framework AngularJs pour le front-end et d'un serveur Apache PHP pour la gestion des comptes utilisateurs.<br>Déploiment sur PlayStore et AppStore en Juin 2014"
 			},
 			sponsorboost : {
-				title : "Stage à SponsorBoost",
+				title : "Refonte du back-end d'une régie publicitaire.",
 				text : "Dans le cadre du stage à l'IUT, je fais le mien à SponsorBoost, une start-up de publicité en ligne en tant que développeur web avec un camarade de promotion. J'y apporterais des améliorations au site existant ainsi que développer une nouvelle mouture de ce dernier en utilisant des technologies web plus modernes et plus performantes. Celui-ci sera développé grâce à un framework MVC en PHP développé par nos soins (mon collègue et moi), ainsi qu'avec JQuery, Ajax et Bootstrap."
+			},
+			projetXML : {
+				title : "Hotels de Nice",
+				text : "Développement d'un site web avec les technologies XSL/XQuery pour la consultation des hôtels de Nice. On peut visualiser les hôtels au cas par cas avec une description complète et un carrousel JQuery (Owl Carousel) contenant un ensemble de photos de l'hôtel, ou encore dans un tableau JQuery permettant la recherche et le filtrage sans rechargement (DataTables). Affichage dans une même page de graphes SVG (Raphael.js) pour des statistiques sur les prix des hôtels apparaissant dans un Google Map. Et enfin, possibilité d'export en PDF d'exemples de graphes SVG. <br><a href='docs/Rapport XML.pdf' style='color: #ffffff' target='pdfXML'>Voir le rapport du projet...</a>"
 			}
 		},
 
@@ -124,7 +128,7 @@ app.controller('AppControler', function($scope) {
 			downloadCV : "Téléchargez mon CV en anglais ou en français.",
 			englishDownloadlLabel : "Anglais",
 			frenchDownloadLabel : "Français",
-			poweredByText : "Ce site à été crée grâce à Bootstrap et utilise Angular.js, Ajax, et PHP. Si vous avez des remarques ou idées d'amélioration n'hésitez surtout pas à m'écrire un commentaire !",
+			poweredByText : "Ce site à été crée grâce à Bootstrap et utilise Angular.js, Jquery, et PHP. Si vous avez des remarques ou idées d'amélioration n'hésitez surtout pas à m'écrire un commentaire !",
 			writeMessage : "Ecrire un commentaire "
 		},
 
@@ -132,12 +136,25 @@ app.controller('AppControler', function($scope) {
 			title : "Contact",
 			mailContact : "Vous pouvez me joindre par e-mail sur ",
 			socialContact : "retrouvez moi aussi sur Facebook Twitter, Google+ et LinkedIn!",
-			footer : "Site crée et maintenu par Christian Pavinich - 2014"
-		}
+			footer : "Christian Pavinich - 2014"
+		},
+		modal : {
+			title : "Envoyez un commentaire.",
+			mail : "Votre e-mail",
+			subject : "Sujet",
+			content : "Votre message",
+			send : "Envoyer",
+			cancel : "Annuler",
+			success : "Votre commentaire a été envoyé.",
+			error : "Il y a eu une erreur avec l'envoi du commentaire.",
+			missing : "Il manque des informations dans le formulaire d'envoi."
+		},
+		emailLink : "Ce lien."
+
 	};
 
 	$scope.langEN = {
-		title : "Welcome to my personnal Website !",
+		title : "French/Americain computer science Master student at Sophia-Antipolis at Miage, new technologies and software development lover.",
 		menu : {
 			category : "Categories",
 			home : "Home",
@@ -152,10 +169,9 @@ app.controller('AppControler', function($scope) {
 			title : "My personnal and professionnal journey, and my formation"
 		},
 
-		calloutText : "What I can do.",
+		calloutText : "My Skills",
 
 		skills : {
-			title : "My Skills",
 			web : {
 				title : "Web Development",
 				text : "Experience in web technologies like JQuery, HTML5, JEE, PHP and Ajax. Use of modern frameworks like Symfony and Angular.js."
@@ -166,6 +182,7 @@ app.controller('AppControler', function($scope) {
 			},
 			desktopDevelopment : {
 				title : "Software programming",
+				agile : "Agile methods",
 				text : "Development of a large number of Java projects using the Swing and Socket librairies, but also projects using C, C#, C++, Python, VBA/VBS, etc... Knowledge of major Design Paterns like MVC, ou the patterns of the \"Gang of Four\""
 			},
 			OS : {
@@ -185,21 +202,25 @@ app.controller('AppControler', function($scope) {
 		projects : {
 			title : "My projects",
 			runBelievable : {
-				title : "Mobile application on Android and IOs",
-				text : "Development of a mobile application on Android and Apple smartphones using Cordova/Phonegap for sportsmen for the monitoring and planification of sport sessions like running."
+				title : "RunBelievable",
+				text : "Development of a mobile application on Android and Apple smartphones using Cordova/Phonegap for sportsmen for the monitoring and planification of sport sessions like running, bike riding...<br>Usage of the AngularJs framework for the front-end, and of an Apache PHP server for user account management.<br>Deployment on the Playstore and AppStore in June 2014."
 			},
 			sponsorboost : {
-				title : "Internship at SponsorBoost",
+				title : "Back-end rework of an online advertising startup",
 				text : "In the context of my IUT internship, I did mine at SponsorBoost, an online advertising startup as a Web Developper with a collegue of my promotion. I would enhance the existing website, and also develop a new version of this one using more modern and performant web technologies. This project was developped using our own MVC framework that we developped (my collegue and I), and with JQuery, Ajax and Bootstrap."
+			},
+			projetXML : {
+				title : "Hotels of Nice",
+				text : "Development of a website with XSL/XQuery technologies for the consultation of all of the hotels of Nice. It is possible to visualise each hotel with a complete description and a JQuery carousel (Owl Carousel) containing a few photos of the hotel, or in a JQuery table for instant research and filtering of all of the hotels (DataTables). Display on a same page of SVG graphes (Raphael.js) for price statistics of the hotels appearing on a Google Map. And finnaly, possibility to export in a PDF examples of SVG graphes. <br><a href='docs/Rapport XML.pdf' style='color: #ffffff' target='pdfXML'>Check out the project report...</a>"
 			}
 		},
 
 		complements : {
 			title : "Complements",
-			downloadCV : "Download my French or English CV.",
+			downloadCV : "Download my French or English resume.",
 			englishDownloadlLabel : "English",
 			frenchDownloadLabel : "French",
-			poweredByText : "This Website is powered by Bootstrap, Angular.js, Ajax and PHP. If you have any comments or ideas to help me make this website better, please de not hesitate to send me a message right below !",
+			poweredByText : "This Website is powered by Bootstrap, Angular.js, Jquery and PHP. If you have any comments or ideas to help me make this website better, please de not hesitate to send me a message right below !",
 			writeMessage : "Send a comment"
 		},
 
@@ -208,7 +229,21 @@ app.controller('AppControler', function($scope) {
 			mailContact : "You can reach me on my e-mail on",
 			socialContact : "Catch me also on Facebook, Twitter, Google+ and LinkedIn !",
 			footer : "Website created and maintained by Christian Pavinich - 2014"
-		}
+		},
+
+		modal : {
+			title : "Send a comment",
+			mail : "Your e-mail",
+			subject : "Subject",
+			content : "Your message",
+			send : "Send",
+			cancel : "Cancel",
+			success : "Your comment has been sent.",
+			error : "Internal error, your comment has not be sent.",
+			missing : "There is missing information in your comment."
+		},
+
+		emailLink : "This link."
 	};
 
 	$scope.changeDemo = function(type, fr) {
@@ -307,13 +342,14 @@ app.controller('AppControler', function($scope) {
 					date : '2011-05-15',
 					title : 'Obtention du certificat Voltaire',
 					content : "Pendant mes études à l'IUT j'obtiens ma certification Voltaire attestant de mon niveau en Français.",
+					height : 300,
 					image : 'img/voltaire.png',
 					readmore : 'http://www.certificat-voltaire.fr/'
 				}, {
 					type : 'blog_post',
 					date : '2013-09-17',
 					title : 'Entrée à Miage en M1',
-					content : "Ayant été déçu de la formation de Polytech' Nice et de l'aperçu de ce que pouvait être le métier d'Ingénieur en Informatique, je décide de me réorienter dans la formation Miage se trouvant également à Sophia Antipolis. Cette formation correspond plus à la vision que je me fais du métier d'informaticien, plus porté sur le développement et la théorie Informatique ainsi que la gestion d'entreprise.",
+					content : "Après une année passé à Polytech' Nice, je me rends compte que cette formation ne correspond pas tout à fait à mon profil. Voulant une expérience d'avantage portée sur le développement et la gestion d'entreprise, je décide de me réorienter dans la formation Miage se trouvant également à Sophia Antipolis. Cette formation correspond plus à la vision que je me fais de mon futur en tant qu'informaticien.",
 					image : 'img/miage.jpg',
 					readmore : 'http://miage.unice.fr/'
 				}];
@@ -349,7 +385,7 @@ app.controller('AppControler', function($scope) {
 					type : 'blog_post',
 					date : '2000-12-01',
 					title : 'Moving to Nice',
-					content : 'After the Divorce of my parents in 1999, I moved to Nice with my mother.',
+					content : 'After the divorce of my parents in 1999, I moved to Nice with my mother.',
 					image : 'img/baieDesAnges.jpg'
 				}, {
 					type : 'blog_post',
@@ -412,7 +448,7 @@ app.controller('AppControler', function($scope) {
 					type : 'blog_post',
 					date : '2013-09-17',
 					title : 'Entrance at Miage',
-					content : "Having been disappointed with the formation of Polytech 'Nice and after catching a glimpse of what could be a career in Computer Engineering, I decided to redirect myself in the Miage formation also located in Sophia Antipolis. This formation is more of what I imagined a job in computer science would be, more focused on development, computer science theory and business management.",
+					content : "After a year at Polytech' Nice, I realise that this formation doesn't really match my profile. Wanting a more development oriented and business management experience, I decided to redirect myself in the Miage formation also located at Sophia Antipolis. This formation is more of what I imagined my future would be as a developer.",
 					image : 'img/miage.jpg',
 					readmore : 'http://miage.unice.fr/'
 				}];
@@ -467,4 +503,83 @@ app.controller('AppControler', function($scope) {
 
 	$scope.lang = $scope.langFR;
 
+	$scope.afficherAlerte = function(id, msg, type) {
+		$(id).alert();
+
+		$(id).show();
+
+		$(id).find("p").text(msg);
+
+		$(id).removeClass("alert-danger");
+		$(id).removeClass("alert-info");
+		$(id).removeClass("alert-primary");
+		$(id).removeClass("alert-warning");
+		$(id).removeClass("alert-success");
+
+		switch (type) {
+			case "warning":
+				$(id).addClass("alert-warning");
+				break;
+			case "danger":
+				$(id).addClass("alert-danger");
+				break;
+			case "success":
+				$(id).addClass("alert-success");
+				break;
+		}
+
+	};
+
+	$scope.cacherAlerte = function(id, tps) {
+		$(id).fadeOut(tps);
+	};
+
+	$scope.cacherAlerte("#alertComment", 0);
+	$scope.cacherAlerte("#alertSuccess", 0);
+
+	$(".alert").alert();
+
+	$scope.sendComment = function() {
+		checkEmail();
+		checkContent();
+
+		// je récupère les valeurs
+		var contenu = $('#contentComment');
+		var mail = $('#emailComment');
+
+		if (contenu.parent().hasClass('has-warning') || mail.parent().hasClass('has-warning')) {
+			$scope.afficherAlerte("#alertComment", $scope.lang.modal.missing, "warning");
+			return false;
+		} else {
+			$('#modalComment').modal('hide');
+			$scope.cacherAlerte("#alertComment", 0);
+
+			$.ajax({
+				url : $('#commentForm').attr('action'), // le nom du fichier indiqué dans le formulaire
+				type : $('#commentForm').attr('method'), // la méthode indiquée dans le formulaire (get ou post)
+				data : $('#commentForm').serialize(), // je sérialise les données (voir plus loin), ici les $_POST
+				success : function(html) {// je récupère la réponse du fichier PHP
+					$scope.afficherAlerte("#alertSuccess", $scope.lang.modal.success, "success");
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					$scope.afficherAlerte("#alertSuccess", $scope.lang.modal.error, "danger");
+				}
+			});
+		}
+
+		return;
+	};
+
+	$scope.smallScreen = false;
+
+	$scope.majEmailLink = function() {
+		if ($scope.smallScreen)
+			$("#emailLink").html($scope.lang.emailLink);
+
+	};
+
+	if (screen.width <= 480) {
+		$scope.smallScreen = true;
+		$scope.majEmailLink();
+	}
 });
